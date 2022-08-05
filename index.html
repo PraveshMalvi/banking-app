@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Banking App</title>
+    <script type="text/javascript" src="banking.js"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="login">
+      <h2>Login With Temporary PIN</h2>
+      <input type="text" name="" id="name" placeholder="Name" />
+      <input type="password" maxlength="3" name="" id="pin" placeholder="PIN" />
+      <button onclick="bankingBtn()">Start Banking</button>
+    </div>
+    <div class="welcomeHead">
+      <h1>Welcome! <span id="welcomeName"></span> To Our Bank</h1>
+    </div>
+    <div class="bank-wrap tog_div" id="tog_div">
+      <div class="bank-3c balance">
+        <h2>Account Balance</h2>
+        <div>
+          <h1 id="ac_balance">₹ 0</h1>
+        </div>
+      </div>
+      <div class="bank-3c deposit">
+        <h2>Deposit Amount</h2>
+        <div>
+          <input
+            type="number"
+            name=""
+            id="ac_deposit"
+            placeholder="Enter Amount"
+          />
+          <button onclick="depositCash()">Deposit >></button>
+          <p class="d_error" id="d_error"></p>
+        </div>
+      </div>
+      <div class="bank-3c withdraw">
+        <h2>Withdraw Amount</h2>
+        <div>
+          <input
+            type="number"
+            name=""
+            id="ac_withdraw"
+            placeholder="Enter Amount"
+          />
+          <button onclick="withdrawCash()">Withdraw >></button>
+          <p class="w_error" id="w_error"></p>
+        </div>
+      </div>
+    </div>
+    <div class="gen-slip" id="tog_receipt">
+      <button onclick="generateSlip()">Generate Receipt >></button>
+      <div class="receipt">
+        <p id="receipt"></p>
+        <p id="receipt_dep"></p>
+        <p id="receipt_wit"></p>
+        <p id="receipt_bal"></p>
+      </div>
+    </div>
+  </body>
+</html>
